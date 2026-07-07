@@ -1,0 +1,57 @@
+footer{
+
+padding:80px 10%;
+
+background:#000;
+
+text-align:center;
+
+}
+
+footer h2{
+
+font-size:40px;
+
+}
+
+footer span{
+
+color:#ff0033;
+
+}
+
+footer p{
+
+margin-top:15px;
+
+color:#aaa;
+
+}
+
+.social{
+
+margin-top:25px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.social a{
+
+color:white;
+
+font-size:22px;
+
+transition:.3s;
+
+}
+
+.social a:hover{
+
+color:#ff0033;
+
+}

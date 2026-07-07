@@ -1,0 +1,49 @@
+.spec-table{
+
+    padding:120px 8%;
+
+    background:#070707;
+
+}
+
+.spec-table h2{
+
+    text-align:center;
+
+    font-size:50px;
+
+    margin-bottom:50px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#ff0033;
+
+    padding:18px;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-bottom:1px solid #333;
+
+    text-align:center;
+
+}
+
+tr:hover{
+
+    background:#151515;
+
+}

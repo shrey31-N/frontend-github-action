@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>SuperCars Pro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/spec-table.css">
+    <link rel="stylesheet" href="css/cursor-glow.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css">
+    
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<div id="loader">
+
+<div class="loader-logo">
+
+SUPER<span>CARS</span>
+
+</div>
+
+</div>
+
+<div id="progress"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+SUPER<span>CARS</span>
+
+</div>
+
+<ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="explore.html">Explore</a></li>
+
+        <li><a href="models.html">Models</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="menu">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+
+<source src="assets/videos/hero.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="overlay"></div>
+
+<div class="hero-content"
+data-aos="fade-up">
+
+<h1>
+
+DRIVE THE
+
+<span>LEGENDS</span>
+
+</h1>
+
+<p>
+
+Luxury.
+
+Performance.
+
+Engineering.
+
+</p>
+
+<a href="#"
+
+class="btn">
+
+Explore
+
+</a>
+
+</div>
+
+</section>
+
+<section class="featured" id="models">
+
+    <div class="section-title" data-aos="fade-up">
+        <h2>Featured Models</h2>
+        <p>Two Icons. Two Legends.</p>
+    </div>
+
+    <div class="car-container">
+
+        <div class="car-card tilt" data-aos="fade-right">
+
+            <img src="assets/images/porsche911.jpg" alt="Porsche 911">
+
+            <div class="car-info">
+
+                <h3>Porsche 911</h3>
+
+                <div class="stats">
+
+                    <div>
+                        <h4>379 HP</h4>
+                        <span>Power</span>
+                    </div>
+
+                    <div>
+                        <h4>4.0s</h4>
+                        <span>0-100</span>
+                    </div>
+
+                    <div>
+                        <h4>293</h4>
+                        <span>km/h</span>
+                    </div>
+
+                </div>
+
+                <a href="#" class="car-btn">
+                    Explore
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="car-card tilt" data-aos="fade-left">
+
+            <img src="assets/images/gtrr35.jpg" alt="Nissan GT-R">
+
+            <div class="car-info">
+
+                <h3>Nissan GT-R R35</h3>
+
+                <div class="stats">
+
+                    <div>
+                        <h4>565 HP</h4>
+                        <span>Power</span>
+                    </div>
+
+                    <div>
+                        <h4>2.9s</h4>
+                        <span>0-100</span>
+                    </div>
+
+                    <div>
+                        <h4>315</h4>
+                        <span>km/h</span>
+                    </div>
+
+                </div>
+
+                <a href="#" class="car-btn">
+                    Explore
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="performance" id="performance">
+
+    <div class="section-title" data-aos="fade-up">
+        <h2>Performance Dashboard</h2>
+        <p>Engineered for Speed</p>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="gauge-card">
+
+            <div class="circle">
+                <svg>
+                    <circle cx="90" cy="90" r="75"></circle>
+                    <circle cx="90" cy="90" r="75" id="powerMeter"></circle>
+                </svg>
+
+                <div class="number">
+                    <h3 id="hpCounter">0</h3>
+                    <span>HP</span>
+                </div>
+
+            </div>
+
+            <h3>Horsepower</h3>
+
+        </div>
+
+        <div class="gauge-card">
+
+            <div class="circle">
+
+                <svg>
+
+                    <circle cx="90" cy="90" r="75"></circle>
+
+                    <circle cx="90" cy="90" r="75" id="speedMeter"></circle>
+
+                </svg>
+
+                <div class="number">
+
+                    <h3 id="speedCounter">0</h3>
+
+                    <span>km/h</span>
+
+                </div>
+
+            </div>
+
+            <h3>Top Speed</h3>
+
+        </div>
+
+    </div>
+
+    <div class="engine-box">
+
+        <button id="engineButton">
+            START ENGINE
+        </button>
+
+        <p id="engineStatus">
+            Engine Off
+        </p>
+
+    </div>
+
+</section>
+
+<section class="spec-table">
+
+    <h2>Specifications</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Specification</th>
+
+            <th>Porsche 911</th>
+
+            <th>Nissan GT-R R35</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Engine</td>
+
+            <td>3.0L Twin Turbo Flat-6</td>
+
+            <td>3.8L Twin Turbo V6</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Horsepower</td>
+
+            <td>379 HP</td>
+
+            <td>565 HP</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Transmission</td>
+
+            <td>8-Speed PDK</td>
+
+            <td>6-Speed Dual Clutch</td>
+
+        </tr>
+
+        <tr>
+
+                <td>Top Speed</td>
+
+                <td>293 km/h</td>
+
+                <td>315 km/h</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Drive</td>
+
+            <td>RWD/AWD</td>
+
+            <td>AWD</td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+<section class="gallery">
+
+    <div class="section-title">
+
+    <h2>Gallery</h2>
+
+    <p>Luxury in Every Angle</p>
+
+    </div>
+
+        <div class="gallery-grid">
+
+        <a href="assets/images/porsche9111.jpg"
+        data-lightbox="cars">
+
+            <img src="assets/images/porsche9111.jpg">
+
+        </a>
+
+        <a href="assets/images/gtrr351.jpg"
+        data-lightbox="cars">
+
+            <img src="assets/images/gtrr351.jpg">
+
+        </a>
+
+        <a href="assets/images/porsche9112.jpg"
+        data-lightbox="cars">
+
+            <img src="assets/images/porsche9112.jpg">
+
+        </a>
+
+        <a href="assets/images/gtrr352.jpg"
+        data-lightbox="cars">
+
+            <img src="assets/images/gtrr352.jpg">
+
+        </a>
+
+    </div>
+
+</section>
+
+<section class="showcase">
+
+    <div class="section-title">
+
+        <h2>Featured Showcase</h2>
+
+    </div>
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+
+                <img src="assets/images/porsche9111.jpg">
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <img src="assets/images/gtrr351.jpg">
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <img src="assets/images/porsche9112.jpg">
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <img src="assets/images/gtrr352.jpg">
+
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<section class="parallax">
+
+<div class="overlay"></div>
+
+<div class="content">
+
+<h2>
+
+Every Drive
+
+Tells A Story
+
+</h2>
+
+<p>
+
+Crafted for enthusiasts.
+
+Engineered for perfection.
+
+</p>
+
+</div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/magnetic.js"></script>
+<script src="js/three-background.js"></script>
+<script src="js/scroll-top.js"></script>
+<script src="js/engine.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"></script>
+
+<button id="topBtn">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<div class="engine-controls">
+
+<label>
+
+Engine Volume
+
+</label>
+
+<input
+
+type="range"
+
+id="volume"
+
+min="0"
+
+max="1"
+
+step="0.1"
+
+value="1">
+
+</div>
+
+</body>
+<footer>
+
+<h2>
+
+SUPER<span>CARS</span>
+
+</h2>
+
+<p>
+
+Luxury Performance Engineering
+
+</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+</div>
+
+</footer>
+
+</html>
